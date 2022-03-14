@@ -1,27 +1,15 @@
-# PetListHomework
+# Tech Talent South
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+## To install
+* `npm install`
+* `npm install bootstrap`
 
-## Development server
+## To build
+* `ng serve -open` or `ng s -o`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## The assignment
+* Using what we learned today, make your own Angular project following a similar structure. Your project should:
+  * Display a list of some sort of data (examples: pets, classes, locations, etc.)
+  * Have your data's component contain at least 4 fields (examples: name, id, description, etc.)
+  * Display the information about the selected component when clicked
+* Use your own custom css to style your website as you see fit.
