@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { Pet } from '../pets'
-import { PETS } from '../mock-pets'
 import { PetService } from '../pet.service'
+import { MessageService } from '../message.service'
 
 @Component( {
   selector: 'app-pets',
@@ -14,7 +14,7 @@ export class PetsComponent implements OnInit {
 
   selectedPet?: Pet
 
-  constructor(private petService: PetService) { }
+  constructor(private petService: PetService, private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.getPets()
@@ -22,6 +22,7 @@ export class PetsComponent implements OnInit {
 
   onSelect( pet: Pet ): void {
     this.selectedPet = pet
+    this.messageService.add(`PetComponent: Selected pet id=${pet.id}`)
   }
 
   getPets(): void {
