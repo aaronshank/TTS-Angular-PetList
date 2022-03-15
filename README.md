@@ -19,5 +19,4 @@
 * Make some portion of your data editable.
 * Use a router link to make at least three different pages for your website (examples: homepage, details page, different view layouts).
 * Make a default route for your application.
-
 * Use your own custom css to style your website as you see fit.
