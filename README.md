@@ -2,7 +2,7 @@
 
 ## To Install
 * `npm install`
-* `npm install bootstrap`
+* `npm install angular-in-memory-web-api --save`
 
 ## To Run
 * `ng serve -open` or `ng s -o`
