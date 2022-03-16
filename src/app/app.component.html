@@ -1,9 +1,12 @@
 <div class="container">
   <div class="row">
-    <h1 class="petTitle">The Shank Family Pet List</h1>
+    <h1 class="petTitle">{{title}}</h1>
     <hr>
+    <nav>
+      <a routerLink='/pets'>Pets</a>
+    </nav>
     <div class="col-md-8">
-      <app-pets></app-pets>
+      <router-outlet></router-outlet>
     </div>
     <div class="col-md-4">
       <app-messages></app-messages>
