@@ -1,10 +1,17 @@
-<div *ngIf="pet">
+<div *ngIf="pet" style="text-align: center;">
   <h2>{{pet.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{pet.id}}</div>
+  <hr>
+  <!-- <div><span>id: </span>{{pet.id}}</div> -->
+  <div><span>{{pet.name}}'s Owner: </span>{{pet.owner}}</div>
+  <div><span>{{pet.name}}'s Age: </span>{{pet.age}}</div>
+  <br>
+  <img src="{{pet.pictureUrl}}" class="selectedImage"/>
   <div>
     <label for="pet-name">Pet name: </label>
     <input id="pet-name" [(ngModel)]="pet.name" placeholder="Pet name" />
   </div>
+  <br>
+  <hr>
   <button type="button" (click)="goBack()">Go Back</button>
   <button type="button" (click)="save()">Save</button>
 </div>

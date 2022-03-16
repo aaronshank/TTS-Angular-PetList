@@ -1,4 +1,4 @@
-/* HeroSearch private styles */
+/* PetSearch private styles */
 
 label {
   display: block;
@@ -46,4 +46,9 @@ li {
 ul.search-result {
   margin-top: 0;
   padding-left: 0;
+}
+
+.center-block {
+  margin: auto;
+  display: block;
 }

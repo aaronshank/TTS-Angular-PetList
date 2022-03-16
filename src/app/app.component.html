@@ -1,16 +1,8 @@
-<div class="container">
-  <div class="row">
-    <h1 class="petTitle">{{title}}</h1>
-    <hr>
-    <nav>
-      <a routerLink='/dashboard'>Dashboard</a>
-      <a routerLink='/pets'>Pets</a>
-    </nav>
-    <div class="col-md-8">
-      <router-outlet></router-outlet>
-    </div>
-    <div class="col-md-4">
-      <app-messages></app-messages>
-    </div>
-  </div>
-</div>
+<h1 class="petTitle">{{title}}</h1>
+<hr>
+<nav style="text-align: center;">
+  <a routerLink='/dashboard'>Dashboard</a>
+  <a routerLink='/pets'>Pets</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
