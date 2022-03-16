@@ -3,6 +3,8 @@
   <div><span>id: </span>{{pet.id}}</div>
   <div>
     <label for="pet-name">Pet name: </label>
-    <input type="text" id="pet-name" [(ngModel)]="pet.name" placeholder="name">
+    <input id="pet-name" [(ngModel)]="pet.name" placeholder="Pet name" />
   </div>
+  <button type="button" (click)="goBack()">Go Back</button>
+  <button type="button" (click)="save()">Save</button>
 </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Pet } from '../pets'
 import { PetService } from '../pet.service'
-import { MessageService } from '../message.service'
 
 @Component( {
   selector: 'app-pets',
@@ -12,22 +11,29 @@ export class PetsComponent implements OnInit {
 
   pets : Pet[] = []
 
-  selectedPet?: Pet
-
-  constructor(private petService: PetService, private messageService: MessageService) { }
+  constructor(private petService: PetService) { }
 
   ngOnInit(): void {
     this.getPets()
   }
 
-  onSelect( pet: Pet ): void {
-    this.selectedPet = pet
-    this.messageService.add(`PetComponent: Selected pet id=${pet.id}`)
-  }
-
   getPets(): void {
     this.petService.getPets()
       .subscribe(pets => this.pets = pets)
+  }
+
+  add(name: string): void {
+    name = name.trim()
+    if (!name) { return }
+    this.petService.addPet({ name } as Pet)
+      .subscribe(pet => {
+        this.pets.push(pet)
+      })
+  }
+
+  delete(pet: Pet): void {
+    this.pets = this.pets.filter(h => h !== pet)
+    this.petService.deletePet(pet.id).subscribe()
   }
 
 }

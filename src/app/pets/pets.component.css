@@ -1,35 +1,48 @@
+/* HeroesComponent's private CSS styles */
 .pets {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 20em;
+  width: 15em;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
 }
 
 .pets li {
-  cursor: pointer;
   position: relative;
-  left: 0;
+  cursor: pointer;
+}
+
+.pets li:hover {
+  left: .1em;
+}
+
+.pets a {
+  color: #333;
+  text-decoration: none;
   background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
+  display: block;
+  width: 100%;
 }
 
-.pets li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+.pets a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
 }
 
-.pets li.selected {
-  background-color: #CFD8DC;
-  color: white;
-}
-
-.pets li.selected:hover {
-  background-color: #BBD8DC;
-  color: white;
+.pets a:active {
+  background-color: #525252;
+  color: #fafafa;
 }
 
 .pets .badge {
@@ -43,11 +56,35 @@
   left: -1px;
   top: -4px;
   height: 1.8em;
+  min-width: 16px;
+  text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
 
-.selectedImage {
-  height: 300px;
-  width: 300px;
+.add-button {
+ padding: .5rem 1.5rem;
+ font-size: 1rem;
+ margin-bottom: 2rem;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+button.delete {
+  position: absolute;
+  left: 210px;
+  top: 5px;
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.delete:hover {
+  background-color: #525252;
+  color: white;
 }
